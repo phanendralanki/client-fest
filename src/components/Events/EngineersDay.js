@@ -1,10 +1,10 @@
 import React from 'react';
-import { Toaster, toast } from 'react-hot-toast';
+// import { Toaster, toast } from 'react-hot-toast';
 
 const EngineersDay = () => {
   return (
     <>
-      <Toaster position="top-center" reverseOrder={false} />
+      {/* <Toaster position="top-center" reverseOrder={false} /> */}
       <div className="event-title">
         <h1 className="event-title-heading text-center cssFont mt-10 fs-7">
           Utkarsh 2024 Events
