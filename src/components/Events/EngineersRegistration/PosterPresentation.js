@@ -176,7 +176,7 @@ const PosterPresentation = () => {
                   <option value="CSE-BS">CSE-BS</option>
                   <option value="CSE-CS">CSE-CS</option>
                   <option value="AI&DS">AI&DS</option>
-                  <option value="CIVIL">Civil</option>
+                  <option value="CIVIL">CIVIL</option>
                   <option value="ECE">ECE</option>
                   <option value="EEE">EEE</option>
                   <option value="IT">IT</option>
@@ -184,6 +184,10 @@ const PosterPresentation = () => {
                   <option value="Robotics">Robotics</option>
                   <option value="MBA">MBA</option>
                   <option value="MCA">MCA</option>
+                  <option value="BBA">BBA</option>
+                  <option value="BCA">BCA</option>
+                  <option value="BMS">BMS</option>
+                  <option value="DIPLOMA">DIPLOMA</option>
                 </select>
               </div>
 
