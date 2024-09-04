@@ -4,7 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 const PosterPresentation = () => {
   const navigate = useNavigate();
-  const [loading,setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     regno: "",
     mobileno: "",
@@ -60,39 +60,43 @@ const PosterPresentation = () => {
       setLoading(false);
       return;
     }
-    try{
-    // const response = await fetch("http://localhost:8080/api/onlineGames/registerForOnline", {
-    const response = await fetch("https://server-fest.onrender.com/api/onlineGames/registerForOnline",{
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      // const response = await fetch("http://localhost:8080/api/onlineGames/registerForOnline", {
+      const response = await fetch(
+        "https://server-fest.onrender.com/api/onlineGames/registerForOnline",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
-    if (response.status === 201) {
-      toast.success("Registered successfully");
-      setFormData({
-        regno: "",
-        mobileno: "",
-        year: "2nd year",
-        branch: "IT",
-        interestedGames: {
-          pubg: false,
-          freeFire: false,
-          posterPresentation: false,
-          ludo: false,
-          uno: false,
-        },
-      });
-      setTimeout(() => {
-        navigate("/events");
-      }, 2000);
-    } else if (response.status === 400) {
-      toast.error("Already Registered with this registration number");
-    } else {
-      toast.error("Something Went Wrong");
-    }}catch (error) {
+      if (response.status === 201) {
+        toast.success("Registered successfully");
+        setFormData({
+          regno: "",
+          mobileno: "",
+          year: "2nd year",
+          branch: "IT",
+          interestedGames: {
+            pubg: false,
+            freeFire: false,
+            posterPresentation: false,
+            ludo: false,
+            uno: false,
+          },
+        });
+        setTimeout(() => {
+          navigate("/events");
+        }, 2000);
+      } else if (response.status === 400) {
+        toast.error("Already Registered with this registration number");
+      } else {
+        toast.error("Something Went Wrong");
+      }
+    } catch (error) {
       toast.error("Something Went Wrong");
     } finally {
       setLoading(false);
@@ -148,6 +152,7 @@ const PosterPresentation = () => {
                   onChange={handleChange}
                   required
                 >
+                  <option value="1st year">1st year</option>
                   <option value="2nd year">2nd year</option>
                   <option value="3rd year">3rd year</option>
                   <option value="4th year">4th year</option>
@@ -165,9 +170,20 @@ const PosterPresentation = () => {
                   onChange={handleChange}
                   required
                 >
+                  <option value="CSE">CSE</option>
+                  <option value="AIML">AIML</option>
+                  <option value="CSE-DS">CSE-DS</option>
+                  <option value="CSE-BS">CSE-BS</option>
+                  <option value="CSE-CS">CSE-CS</option>
+                  <option value="AI&DS">AI&DS</option>
+                  <option value="CIVIL">Civil</option>
+                  <option value="ECE">ECE</option>
+                  <option value="EEE">EEE</option>
                   <option value="IT">IT</option>
-                  <option value="CSBS">CSBS</option>
-                  <option value="CSCS">CSCS</option>
+                  <option value="Mechanical">Mechanical</option>
+                  <option value="Robotics">Robotics</option>
+                  <option value="MBA">MBA</option>
+                  <option value="MCA">MCA</option>
                 </select>
               </div>
 
@@ -219,7 +235,7 @@ const PosterPresentation = () => {
 
               <div className="text-center">
                 <button type="submit" className="btn btn-primary">
-                {loading ? "Loading....": "Register"}
+                  {loading ? "Loading...." : "Register"}
                 </button>
               </div>
             </form>

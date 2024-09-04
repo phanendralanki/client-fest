@@ -111,7 +111,7 @@ const Details = () => {
             <div className="d-flex justify-content-center">
               <table
                 className="table table-bordered table-hover table-responsive table-sm"
-                // id="no-more-tables"
+                id="no-more-tables"
               >
                 <thead>
                   <tr>
@@ -163,7 +163,7 @@ const Details = () => {
             <div className="d-flex justify-content-center">
               <table
                 className="table table-bordered table-hover table-responsive table-sm"
-                // id="no-more-tables"
+                id="no-more-tables"
               >
                 <thead>
                   <tr>
@@ -217,7 +217,7 @@ const Details = () => {
             <div className="d-flex justify-content-center">
               <table
                 className="table table-bordered table-hover table-responsive table-sm"
-                // id="no-more-tables"
+                id="no-more-tables"
               >
                 <thead>
                   <tr>
@@ -271,7 +271,7 @@ const Details = () => {
             <div className="d-flex justify-content-center">
               <table
                 className="table table-bordered table-hover table-responsive table-sm"
-                // id="no-more-tables"
+                id="no-more-tables"
               >
                 <thead>
                   <tr>

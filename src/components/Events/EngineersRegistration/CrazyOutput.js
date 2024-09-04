@@ -148,6 +148,7 @@ const CrazyOutput = () => {
                   onChange={handleChange}
                   required
                 >
+                  <option value="1st year">1st year</option>
                   <option value="2nd year">2nd year</option>
                   <option value="3rd year">3rd year</option>
                   <option value="4th year">4th year</option>
@@ -165,9 +166,20 @@ const CrazyOutput = () => {
                   onChange={handleChange}
                   required
                 >
+                  <option value="CSE">CSE</option>
+                  <option value="AIML">AIML</option>
+                  <option value="CSE-DS">CSE-DS</option>
+                  <option value="CSE-BS">CSE-BS</option>
+                  <option value="CSE-CS">CSE-CS</option>
+                  <option value="AI&DS">AI&DS</option>
+                  <option value="CIVIL">Civil</option>
+                  <option value="ECE">ECE</option>
+                  <option value="EEE">EEE</option>
                   <option value="IT">IT</option>
-                  <option value="CSBS">CSBS</option>
-                  <option value="CSCS">CSCS</option>
+                  <option value="Mechanical">Mechanical</option>
+                  <option value="Robotics">Robotics</option>
+                  <option value="MBA">MBA</option>
+                  <option value="MCA">MCA</option>
                 </select>
               </div>
 
