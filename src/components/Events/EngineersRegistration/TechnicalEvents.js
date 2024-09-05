@@ -48,7 +48,7 @@ const TechnicalEvents = () => {
     //   return;
     // }
     if (!mobilePattern.test(formData.mobileno)) {
-      toast.error("Invalid Mobile number");
+      toast.error("Invalid Mobile number, +91 not needed");
       setLoading(false);
       return;
     }

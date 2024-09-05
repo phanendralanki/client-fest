@@ -44,7 +44,7 @@ const PPTRegistration = () => {
     //   return;
     // }
     if (!mobilePattern.test(formData.mobileno)) {
-      toast.error("Invalid Mobile number");
+      toast.error("Invalid Mobile number, no need to mention +91");
       setLoading(false);
       return;
     }
