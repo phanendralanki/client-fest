@@ -39,14 +39,14 @@ const TechnicalEvents = () => {
     e.preventDefault();
     setLoading(true);
 
-    const regnoPattern = /^[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{4}$/;
+    // const regnoPattern = /^[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{4}$/;
     const mobilePattern = /^[0-9]{10}$/;
 
-    if (!regnoPattern.test(formData.regno)) {
-      toast.error("Invalid registration number");
-      setLoading(false);
-      return;
-    }
+    // if (!regnoPattern.test(formData.regno)) {
+    //   toast.error("Invalid registration number");
+    //   setLoading(false);
+    //   return;
+    // }
     if (!mobilePattern.test(formData.mobileno)) {
       toast.error("Invalid Mobile number");
       setLoading(false);
